@@ -1,0 +1,9 @@
+﻿@model YemekTarifleri.Models.InsecureUser
+
+<h2>Güvensiz Kayıt</h2>
+<form asp-action="Index" method="post">
+    <input asp-for="Username" placeholder="Kullanıcı Adı" class="form-control" />
+    <input asp-for="Email" placeholder="E-mail" class="form-control" />
+    <input asp-for="Password" placeholder="Şifre (düz kaydedilecek!)" class="form-control" />
+    <button type="submit" class="btn btn-danger mt-2">Kaydol</button>
+</form>

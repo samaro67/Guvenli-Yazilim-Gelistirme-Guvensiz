@@ -1,0 +1,32 @@
+﻿@model List<YemekTarifleri.Models.InsecureUser>
+
+<h2>SQL Injection Testi</h2>
+
+<form method="get">
+    <input type="text" name="q" placeholder="Kullanıcı adı ara..." />
+    <button type="submit">Ara</button>
+</form>
+
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Kullanıcı Adı</th>
+                <th>Şifre</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.Username</td>
+                    <td>@user.Password</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
